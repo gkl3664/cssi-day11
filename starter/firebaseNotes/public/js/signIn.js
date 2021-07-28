@@ -58,12 +58,12 @@ const createAccount = (event) => {
             let acct = data[key];
             if(acct.password == potentialPassword)
             {
-                alert("This password is already in use. Please choose a different password.");
+                document.querySelector("#error").innerHTML = "This password is already in use. Please choose a different password.";
                 return;
             }
             else if(acct.username == potentialUsername)
             {
-                alert("This username is already in use. Please choose a different username.");
+                document.querySelector("#error").innerHTML="This username is already in use. Please choose a different username.";
                 return;
             }
         }
